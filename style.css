@@ -6,6 +6,15 @@
     src: url("assets/fonts/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/CircularStd-Bold.woff") format("woff"), url("assets/fonts/CircularStd-Bold.ttf") format("truetype"), url("assets/fonts/CircularStd-Bold.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
 :root {
     --primary-color: none;
     --overlay-color: rgba(255, 255, 255, 0.9);
@@ -594,7 +603,7 @@ li {
 }
 
 .social-icons {
-    margin-top: 30%;
+    margin-top: 10%;
 }
 
 .footer-full {
@@ -611,6 +620,7 @@ li {
 .footer-credits {
     float: right;
     /* display: inline; */
+    margin-right: 15px;
 }
 
 .footer-credits a {
