@@ -1,7 +1,7 @@
 {
-  "name": "mohsinht-resume",
+  "name": "sameers-resume",
   "private": true,
-  "description": "Resume of Mohsin Hayat",
+  "description": "Resume of Sameer Kamran",
   "version": "0.0.1",
   "license": "0BSD",
   "scripts": {
@@ -39,6 +39,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mohsinht/mohsinht.github.io"
+    "url": "https://github.com/smrkamran/smrkamran.github.io"
   }
 }

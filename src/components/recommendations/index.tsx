@@ -24,8 +24,6 @@ const Recommendations = (props: IProps) => {
               <div
                 key={index}
                 className='col-md-6'
-                data-sal='zoom-in'
-                data-sal-easing='ease'
               >
                 <div className='rec-box'>
                   {' '}

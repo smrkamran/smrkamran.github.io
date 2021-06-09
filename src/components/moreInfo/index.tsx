@@ -19,11 +19,11 @@ interface IProps {
 const MoreInfo = (props: IProps) => {
   return (
     <>
-      <Heading text='More' />
+      <Heading text='Skills' />
 
       <div className='container more-block'>
         <div className='row more-row'>
-          <div className='col-md-6' data-sal='zoom-in' data-sal-easing='ease'>
+          <div className='col-md-6'>
             <h2 className='more-heading font-size-5'>Certifications</h2>
             <div className='certifications'>
               {props.text.certifications.map((certificate, index) => {
@@ -51,8 +51,6 @@ const MoreInfo = (props: IProps) => {
           </div>
           <div
             className='col-md-6 left-sep'
-            data-sal='zoom-in'
-            data-sal-easing='ease'
           >
             <h2 className='more-heading font-size-5'>Technologies</h2>
             <div className='technologies'>

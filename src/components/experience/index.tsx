@@ -26,7 +26,7 @@ const Experience = (props: IProps) => {
             <React.Fragment key={key}>
               <div
                 className='row experience-row'
-                data-sal='zoom-in'
+                // data-sal='zoom-in'
                 data-sal-easing='ease'
               >
                 <div className='col-md-12'>

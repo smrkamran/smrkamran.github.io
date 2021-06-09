@@ -49,13 +49,13 @@ export default function IndexRoute(props: PageProps) {
         <Intro text={IntroContent} dp={assets.displayPicture} />
         <ReachDetails items={ReachContent} />
         <PersonalStatement text={PersonalStatementContent} />
-        <Education text={EducationContent} />
-        <Experience text={ExperienceContent} />
-        <Projects text={ProjectsContent} />
-        <MostProudOf text={ProudContent} />
         <MoreInfo text={MoreInfoContent} />
+        <Experience text={ExperienceContent} />
+        <Education text={EducationContent} />
+        {/* <Projects text={ProjectsContent} /> */}
+        {/* <MostProudOf text={ProudContent} /> */}
         <Recommendations text={RecommendationContent} />
-        <Testimonials text={TestimonialContent} />
+        {/* <Testimonials text={TestimonialContent} /> */}
         <Contact text={ContactContent} />
       </div>
     </>

@@ -1,60 +1,63 @@
 export default [
   {
-    title: 'Full-Stack Developer',
-    company: 'Tintash',
-    url: 'https://www.tintash.com',
-    location: 'Lahore, Pakistan',
-    from: 'July 2020',
-    to: 'April, 2021',
-    bullets: [
-      '[Jul-Aug] Got training sessions on Python (Django), Clean-Code and Git.',
-      '[Aug-Sep] Worked on a web-based game called "Unlocked: Rogue Scientist 1990" by The Escape Game. I developed the dashboard using React/Redux and the backend in NodeJs with Sequelize.',
-      '[Sep-Jan] Developed complete backend of a web-based multiplayer game using NodeJS.',
-      '[Jan-Apr] Worked as a Full-Stack developer to implement complete solution of booking and automating remote experiences.'
-    ],
-  },
-  {
-    title: 'Web Developer Intern (Summers)',
-    company: 'SolutionInn',
-    url: 'https://www.solutioninn.com',
+    title: 'Full Stack Developer',
+    company: 'Boltech Solutions',
+    url: 'http://boltechsolutions.com/',
     location: 'Lahore, Pakistan',
     from: 'June 2019',
-    to: 'October 2019',
+    to: 'Present',
     bullets: [
-      'Worked on Node.JS and React.JS to create a real-time tutoring system.',
-      'Worked on Socket.io to implement realtime Whiteboard, Code/Text Editor and Chat app.',
-      'Implemented an efficient backend using PHP and MySQL.',
-      'Worked on the main iOS app of SolutionInn, intended for students to search and buy solutions.',
+      'Worked on Tax Management System for Government of Malawi, Africa (.Net MVC5, SQL Server, SignalR, AutoMapper, Autofac, Angular 6, Angular Material, PrimeNg)',
+      'Worked on GYM Management System for UFC Gym International (.Net Core 3.0, MySQL, SignalR, AutoMapper, Autofac, Angular 8, Angular Material, ZKTeco Access Gates Integration)',
+      'Worked on Employee Service Catalogue & Digital Approvals System for Exceed IT Services (ExpressJS, Mongoose, MongoDB, Angular 7)'
     ],
   },
   {
-    title: 'Frontend Developer Intern (Summers)',
-    company: 'Respond.io',
-    url: 'https://respond.io/',
+    title: 'Web Developer (Part Time)',
+    company: 'HighBit Technologies',
+    url: 'https://www.highbitsol.com/',
     location: 'Lahore, Pakistan',
-    from: 'July 2018',
-    to: 'September 2018',
+    from: 'February 2019',
+    to: 'June 2019',
     bullets: [
-      'Worked on Vue.JS and implemented centralized Vuex store in the web app (app.rocketbots.io)',
-      'Implemented a webchat plugin for websites using PReact, Socket.io & Botman',
-      'Fixed daily reported bugs on Jira.',
-      'Worked on Dyson node.js server to create JSON APIs for demo bot.',
+      'Revamped a Mobile Repair Shop POS System (NodeJS, Sequelize, GraphQL, Angular 7, Angular Material)'
     ],
   },
-
   {
-    title: 'Top Rated Freelance Web Developer',
-    company: ['Upwork', 'Fiverr'],
-    url: ['https://upwork.com/', 'https://fiverr.com/'],
+    title: '.Net Developer',
+    company: 'Codility Solutions',
+    url: 'https://codility.co/',
     location: 'Lahore, Pakistan',
-    from: 'July 2016',
-    to: 'September 2018',
+    from: 'March 2018',
+    to: 'June 2019',
     bullets: [
-      'Worked on core WordPress including theme/plugin customization & bug fixing',
-      'Remained Top Rated on Upwork in 2016, completing 15+ jobs.',
-      'Gained Level 1 on Fiverr.com by completing 25+ jobs.',
-      'Worked on UI/UX Design & Site Optimization Tools.',
-      'Also worked on graphic design (branding) projects',
+      'Worked on Purchase Order Management Web Application (.Net Core 2.1 WebApi, SQL Server, .Net MVC5, KnockoutJS, VanillaJS, SQL Server)',
+      'Worked on Inventory/Point-of-Sale Desktop Application (WPF, SQLite, MvvmCross, DevExpress)',
+      'Worked on Office Management System. Attendance/Task Management (.Net MVC5, SQL Server, SignalR, ZKTeco Biometric Integration)'
     ],
   },
+  {
+    title: 'Freelance Web Developer',
+    company: ['Upwork'],
+    url: ['https://upwork.com/'],
+    location: 'Lahore, Pakistan',
+    from: 'August 2017',
+    to: 'February 2018',
+    bullets: [
+      'Worked on a Digital Magazine Website (.Net MVC5, SQL Server, Bootstrap, JQuery)',
+      'Resolved RabbitMQ exchange issue in HR Portal',
+      'Built Custom Chat for NopCommerce Website'
+    ],
+  },
+  {
+    title: '.Net Developer (Internship)',
+    company: ['Inseparable Technology'],
+    url: ['http://insep.tech/'],
+    location: 'Lahore, Pakistan',
+    from: 'April 2017',
+    to: 'July 2017',
+    bullets: [
+      'Worked on an Ecommerce Store (.Net MVC5, SQL Server, SignalR, OAuth, Social Media Integration)'
+    ],
+  }
 ];

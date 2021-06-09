@@ -1,5 +1,5 @@
 export default {
     displayPicture: {
-        url: 'Mohsin_DP.jpg'
+        url: 'Sameer_DP.jpg'
     }
 }

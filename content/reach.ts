@@ -1,20 +1,20 @@
 export default [
     {
-        text: "mohsinhayat104@gmail.com",
+        text: "me@sameerkamran.de",
         cta: "Click to email me",
-        url: "mailto:mohsinhayat104@gmail.com",
+        url: "mailto:me@sameerkamran.de",
         icon: "fa-envelope-square"
     },
     {
-        text: "Lahore, Punjab, Pakistan",
+        text: "Koblenz, Germany",
         cta: "View location on map",
-        url: "https://goo.gl/maps/cTv2fUYvSSkDxjSh7",
+        url: "https://goo.gl/maps/8NiRpj13BgWR38rd8",
         icon: "fa-map-marker"
     },
     {
-        text: "(+92)-336-4256811",
+        text: "(+49)-177-4052203",
         cta: "Click to call me",
-        url: "tel:+923364526811",
+        url: "tel:+491774052203",
         icon: "fa-phone-square"
     }
 ]
