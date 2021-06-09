@@ -38,8 +38,8 @@ const HtmlHead = () => {
       <meta property='og:image:height' content='255' />
       <link
         rel='icon'
-        type='image/svg+xml'
-        href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2322313f%22></rect><path fill=%22%23fff%22 d=%22M50.20 67.85L40.92 67.85L40.82 48.93L31.64 64.33L27.15 64.33L18.02 49.44L18.02 67.85L8.69 67.85L8.69 32.15L17.00 32.15L29.55 52.75L41.79 32.15L50.10 32.15L50.20 67.85ZM81.21 32.15L91.31 32.15L91.31 67.85L81.21 67.85L81.21 53.93L67.44 53.93L67.44 67.85L57.34 67.85L57.34 32.15L67.44 32.15L67.44 45.56L81.21 45.56L81.21 32.15Z%22></path></svg>'
+        type='image/x-icon'
+        href='/favicon.ico'
       />
     </Helmet>
   );
