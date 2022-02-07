@@ -6,7 +6,7 @@ export default [
         icon: "fa-envelope-square"
     },
     {
-        text: "Koblenz, Germany",
+        text: "Frankfurt, Germany",
         cta: "View location on map",
         url: "https://goo.gl/maps/8NiRpj13BgWR38rd8",
         icon: "fa-map-marker"
