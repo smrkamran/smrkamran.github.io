@@ -1,11 +1,24 @@
 export default [
   {
+    title: 'Software Engineer',
+    company: 'Schwarm Technologies GmbH',
+    url: 'https://schwarm.com/',
+    location: 'Munich, Germany',
+    from: 'June 2021',
+    to: 'Present',
+    bullets: [
+      'Working on highly scalable IOT Web Platform',
+      'My responsibilites also includes developing the custom applications for different Energy Companies in Germany like E.On and Nordex.',
+      'Tools I am using are Angular, Aurelia, Java Spring'
+    ],
+  },
+  {
     title: 'Full Stack Developer',
     company: 'Boltech Solutions',
     url: 'http://boltechsolutions.com/',
     location: 'Lahore, Pakistan',
     from: 'June 2019',
-    to: 'Present',
+    to: 'June 2021',
     bullets: [
       'Worked on Tax Management System for Government of Malawi, Africa (.Net MVC5, SQL Server, SignalR, AutoMapper, Autofac, Angular 6, Angular Material, PrimeNg)',
       'Worked on GYM Management System for UFC Gym International (.Net Core 3.0, MySQL, SignalR, AutoMapper, Autofac, Angular 8, Angular Material, ZKTeco Access Gates Integration)',
