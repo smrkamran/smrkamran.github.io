@@ -68,6 +68,11 @@ const Header = (props: IHeaderContent & IResumeFile) => {
             </a>
           </li>
           <li className='nav-item'>
+            <a className='nav-link' href="blog.sameerkamran.com">
+              Blog
+            </a>
+          </li>
+          <li className='nav-item'>
             <a className='nav-link' onClick={() => scrollTo('#contact')}>
               Contact
             </a>
