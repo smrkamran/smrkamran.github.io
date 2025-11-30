@@ -1,39 +1,59 @@
-# Welcome to My Resume!
+# SameerPortfolio
 
-I created this resume using **GatsbyJs** for learning purposes but now as I have open-sourced it completely, I'm excited to share the code structure and implementation details. Feel free to fork this and change it the way you want.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
 
-## Folder Structure
-    .
-    ├── node_modules
-    ├── src
-    │   ├──── components
-    │   └──── pages
-    ├── content
-    ├── static
-    │   └──── downloads
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+## Development server
 
-## Updating Content
+To start a local development server, run:
 
-I have followed the idea of **Single change, update eveywhere**. You can modify all the content in the `/content/` folder. To add a new content section, simply add a new typescript file and import it in the `/src/pages/index.tsx`.
+```bash
+ng serve
+```
 
-## Updating Downloads
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-To change downloadable files, add files in the `static/downloads/` folder.
+## Code scaffolding
 
-## Deployment
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-To deploy your resume, use `gatsby build` command to make a build. Make sure to rename your `/public` folder to `/docs` if you want to upload on Github Pages. You can also setup a command following this [link](https://www.gatsbyjs.com/docs/how-gatsby-works-with-github-pages/).
+```bash
+ng generate component component-name
+```
 
-## Design Changes
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-To change design of the resume, use `gatsby develop` and change/add a component in `src/components/` folder.
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

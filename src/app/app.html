@@ -1,0 +1,143 @@
+<div class="page">
+  <header class="section hero">
+    <div class="hero__intro">
+      <p class="eyebrow">Sameer's Resume</p>
+      <div class="hero__name__image">
+        <img src="logo.png" alt="Sameer's Profile Picture" class="hero__image" />
+        <div>
+          <h1>{{ hero.name }}</h1>
+          <p class="hero__title">{{ hero.title }}</p>
+        </div>
+      </div>
+      <p class="hero__statement">
+        {{ statements.personal }}
+      </p>
+      <div class="hero__actions">
+        <a class="btn primary" [href]="blogLink" target="_blank" rel="noreferrer"> Visit Blog </a>
+      </div>
+    </div>
+    <div class="hero__spotlight">
+      <ul class="contact-list">
+        <li *ngFor="let link of contactLinks">
+          <p class="muted-label">{{ link.label }}</p>
+          <a [href]="link.href" target="_blank" rel="noreferrer">
+            {{ link.value }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="section" id="skills">
+    <div class="section__header">
+      <p class="eyebrow">Skills &amp; Certifications</p>
+      <h2>Technologies &amp; tools I enjoy using</h2>
+      <p>
+        From cloud-native backends to polished web interfaces, here are the stacks I reach for when
+        shipping production-grade software.
+      </p>
+    </div>
+    <ul class="pill-list">
+      <li *ngFor="let skill of skills">
+        {{ skill }}
+      </li>
+    </ul>
+    <div class="card-grid" *ngIf="certifications.length > 0">
+      <article class="card" *ngFor="let cert of certifications">
+        <p class="muted-label">Certification</p>
+        <h3>{{ cert.title }}</h3>
+        <p class="card__meta">{{ cert.issuer }} &middot; {{ cert.date }}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="section__header">
+      <p class="eyebrow">Experience</p>
+      <h2>Where I've contributed</h2>
+      <p>Highlights from product and platform work across energy, fitness, commerce, and SaaS.</p>
+    </div>
+    <div class="timeline">
+      <article class="timeline__item" *ngFor="let exp of experiences">
+        <div class="timeline__meta">
+          <p class="period">{{ exp.period }}</p>
+          <p class="location">{{ exp.location }}</p>
+        </div>
+        <div class="timeline__body">
+          <h3>{{ exp.role }}</h3>
+          <p class="company">{{ exp.company }}</p>
+          <ul>
+            <li *ngFor="let highlight of exp.highlights">
+              {{ highlight }}
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="section__header">
+      <p class="eyebrow">Education</p>
+      <h2>Academic background</h2>
+    </div>
+    <div class="card-grid">
+      <article class="card" *ngFor="let school of education">
+        <p class="muted-label">{{ school.period }}</p>
+        <h3>{{ school.degree }}</h3>
+        <p class="card__meta">{{ school.field }}</p>
+        <p class="card__meta">{{ school.institution }}</p>
+        <p class="card__meta">{{ school.location }}</p>
+        <p class="card__meta">{{ school.cgpa }}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="recommendations">
+    <div class="section__header">
+      <p class="eyebrow">Recommendations</p>
+      <h2>Words from collaborators</h2>
+    </div>
+    <div class="card-grid recommendations">
+      <article class="card quote-card" *ngFor="let rec of recommendations">
+        <p class="quote">&ldquo;{{ rec.text }}&rdquo;</p>
+        <p class="author">{{ rec.author }}</p>
+        <p class="card__meta">{{ rec.role }} &middot; {{ rec.source }}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section blog" id="blog">
+    <div class="section__header">
+      <p class="eyebrow">Blog</p>
+      <h2>Thoughts &amp; notes</h2>
+      <p>
+        I share experiments, write-ups, and learning notes on distributed systems and product
+        engineering over on my blog.
+      </p>
+      <a class="btn primary" [href]="blogLink" target="_blank" rel="noreferrer">
+        blog.sameerkamran.com
+      </a>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="section__header">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's talk</h2>
+      <p>{{ contactMessage }}</p>
+    </div>
+    <div class="contact__grid">
+      <a
+        class="contact-card"
+        *ngFor="let link of contactLinks"
+        [href]="link.href"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <p class="muted-label">{{ link.label }}</p>
+        <p class="contact-card__value">{{ link.value }}</p>
+      </a>
+    </div>
+  </section>
+</div>
