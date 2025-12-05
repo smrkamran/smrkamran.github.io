@@ -55,7 +55,7 @@ export class App {
 
   readonly statements = {
     personal:
-      'Software Engineer with more than 6+ years of experience in industry. Worked as a lone-wolf as well as in Agile Teams. Expertise is design and development of Frontend Applications as well as WebApis from scratch. Also designed databases and have been part of requirement gathering teams. Always open to learn new tools and technologies.',
+      'An enthusiastic software engineer focused on creating elegant, practical, and scalable web applications. Combines deep technical knowledge with creative problem-solving to consistently deliver value in fast-paced environments. Enjoys mentoring others, exploring emerging technologies, and collaborating on innovative projects that make a difference.',
   };
 
   readonly blogLink = 'https://blog.sameerkamran.com';
