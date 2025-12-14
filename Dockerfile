@@ -1,12 +1,12 @@
 # --- Build stage: compile Angular app to static files ---
-FROM node:18-alpine AS builder
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
 # Install dependencies first (better layer caching)
 COPY package*.json ./
-# Use npm install to avoid failures when package-lock.json is absent
-RUN npm install --no-audit --no-fund
+# Ensure devDependencies are installed for Angular build
+RUN npm install --no-audit --no-fund --include=dev
 
 # Copy source and build
 COPY . ./
