@@ -34,7 +34,7 @@ To build the project run:
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This will compile your project and store the build artifacts in the `docs/` directory (per `angular.json`), optimized by default for production.
 
 ## Running unit tests
 
@@ -54,6 +54,29 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
+## Docker & CI/CD
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This repository includes a Docker multi-stage build and a GitHub Actions workflow that builds and pushes an image to Docker Hub.
+
+- Image: `${DOCKERHUB_USERNAME}/sameer-portfolio`
+- Build context: repository root using `Dockerfile`
+
+### GitHub Secrets Required
+
+- `DOCKERHUB_USERNAME`: Your Docker Hub username
+- `DOCKERHUB_TOKEN`: Docker Hub access token or password
+
+### Workflow Triggers
+
+- Push to `master` builds and pushes with branch/tag metadata
+- Tags matching `v*.*.*` produce semantic version image tags
+- Manual runs via Workflow Dispatch
+
+### Local Docker Test (Windows PowerShell)
+
+```powershell
+docker build -t <your-username>/sameer-portfolio:local .
+docker run -p 8080:80 <your-username>/sameer-portfolio:local
+```
+
+Open `http://localhost:8080` to view the site.
