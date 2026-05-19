@@ -92,6 +92,31 @@ export class App {
 
   readonly certifications: Certification[] = [
     {
+      title: 'CISCO Introduction to Cybersecurity',
+      issuer: 'Cisco',
+      date: 'May 2026',
+    },
+    {
+      title: 'Front End Development Libraries',
+      issuer: 'freeCodeCamp',
+      date: 'November 2024',
+    },
+    {
+      title: 'JavaScript Algorithms and Data Structures (Beta)',
+      issuer: 'freeCodeCamp',
+      date: 'November 2024',
+    },
+    {
+      title: 'Responsive Web Design',
+      issuer: 'freeCodeCamp',
+      date: 'November 2024',
+    },
+    {
+      title: 'Foundational C# with Microsoft',
+      issuer: 'freeCodeCamp',
+      date: 'November 2024',
+    },
+    {
       title: 'Certified .Net Specialist',
       issuer: 'EVS Learning',
       date: 'April 2017',
