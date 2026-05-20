@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
 
 :root {
-  --surface: #030712;
-  --surface-card: rgba(15, 23, 42, 0.85);
-  --text-primary: #f8fafc;
-  --text-muted: #94a3b8;
-  --primary: #7dd3fc;
-  --accent: #c084fc;
-  --border: rgba(148, 163, 184, 0.25);
+  --surface: #f4f7fb;
+  --surface-card: #ffffff;
+  --text-primary: #222222;
+  --text-muted: #5a6a7a;
+  --primary: #1C5D99;
+  --primary-light: #BBCDE5;
+  --accent: #639FAB;
+  --accent-light: #e8f1f3;
+  --border: #d6e0eb;
 }
 
 *,
@@ -18,10 +20,9 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
-  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.08), transparent),
-    var(--surface);
+  background: var(--surface);
   color: var(--text-primary);
 }
 
@@ -35,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  font-family: 'Libre Baskerville', Georgia, serif;
   margin-top: 0;
   color: var(--text-primary);
 }
