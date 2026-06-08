@@ -3,7 +3,7 @@
     <div class="hero__intro">
       <p class="eyebrow">Sameer's Resume</p>
       <div class="hero__name__image">
-        <img src="logo.png" alt="Sameer's Profile Picture" class="hero__image" />
+        <img src="logo.png" alt="Sameer Kamran" class="hero__image" />
         <div>
           <h1>{{ hero.name }}</h1>
           <p class="hero__title">{{ hero.title }}</p>
@@ -13,17 +13,24 @@
         {{ statements.personal }}
       </p>
       <div class="hero__actions">
-        <a class="btn primary" [href]="blogLink" target="_blank" rel="noreferrer"> Visit Blog </a>
+        <a class="btn primary" [href]="blogLink" target="_blank" rel="noreferrer">
+          <span>Visit Blog</span>
+        </a>
+        <a class="btn ghost" href="#contact">
+          <span>Get in Touch</span>
+        </a>
       </div>
     </div>
     <div class="hero__spotlight">
       <ul class="contact-list">
-        <li *ngFor="let link of contactLinks">
+        @for (link of contactLinks; track link.label) {
+        <li>
           <p class="muted-label">{{ link.label }}</p>
           <a [href]="link.href" target="_blank" rel="noreferrer">
             {{ link.value }}
           </a>
         </li>
+        }
       </ul>
     </div>
   </header>
@@ -38,17 +45,23 @@
       </p>
     </div>
     <ul class="pill-list">
-      <li *ngFor="let skill of skills">
+      @for (skill of skills; track skill) {
+      <li>
         {{ skill }}
       </li>
+      }
     </ul>
-    <div class="card-grid" *ngIf="certifications.length > 0">
-      <article class="card" *ngFor="let cert of certifications">
+    @if (certifications.length > 0) {
+    <div class="card-grid">
+      @for (cert of certifications; track cert.title) {
+      <article class="card">
         <p class="muted-label">Certification</p>
         <h3>{{ cert.title }}</h3>
         <p class="card__meta">{{ cert.issuer }} &middot; {{ cert.date }}</p>
       </article>
+      }
     </div>
+    }
   </section>
 
   <section class="section" id="experience">
@@ -58,7 +71,8 @@
       <p>Highlights from product and platform work across energy, fitness, commerce, and SaaS.</p>
     </div>
     <div class="timeline">
-      <article class="timeline__item" *ngFor="let exp of experiences">
+      @for (exp of experiences; track exp.role) {
+      <article class="timeline__item">
         <div class="timeline__meta">
           <p class="period">{{ exp.period }}</p>
           <p class="location">{{ exp.location }}</p>
@@ -67,12 +81,15 @@
           <h3>{{ exp.role }}</h3>
           <p class="company">{{ exp.company }}</p>
           <ul>
-            <li *ngFor="let highlight of exp.highlights">
+            @for (highlight of exp.highlights; track highlight) {
+            <li>
               {{ highlight }}
             </li>
+            }
           </ul>
         </div>
       </article>
+      }
     </div>
   </section>
 
@@ -82,7 +99,8 @@
       <h2>Academic background</h2>
     </div>
     <div class="card-grid">
-      <article class="card" *ngFor="let school of education">
+      @for (school of education; track school.degree) {
+      <article class="card">
         <p class="muted-label">{{ school.period }}</p>
         <h3>{{ school.degree }}</h3>
         <p class="card__meta">{{ school.field }}</p>
@@ -90,6 +108,7 @@
         <p class="card__meta">{{ school.location }}</p>
         <p class="card__meta">{{ school.cgpa }}</p>
       </article>
+      }
     </div>
   </section>
 
@@ -99,11 +118,13 @@
       <h2>Words from collaborators</h2>
     </div>
     <div class="card-grid recommendations">
-      <article class="card quote-card" *ngFor="let rec of recommendations">
+      @for (rec of recommendations; track rec.author) {
+      <article class="card quote-card">
         <p class="quote">&ldquo;{{ rec.text }}&rdquo;</p>
         <p class="author">{{ rec.author }}</p>
         <p class="card__meta">{{ rec.role }} &middot; {{ rec.source }}</p>
       </article>
+      }
     </div>
   </section>
 
@@ -128,9 +149,9 @@
       <p>{{ contactMessage }}</p>
     </div>
     <div class="contact__grid">
+      @for (link of contactLinks; track link.label) {
       <a
         class="contact-card"
-        *ngFor="let link of contactLinks"
         [href]="link.href"
         target="_blank"
         rel="noreferrer"
@@ -138,6 +159,7 @@
         <p class="muted-label">{{ link.label }}</p>
         <p class="contact-card__value">{{ link.value }}</p>
       </a>
+      }
     </div>
   </section>
 </div>

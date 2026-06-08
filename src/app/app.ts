@@ -1,4 +1,3 @@
-import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 
 type Experience = {
@@ -40,7 +39,7 @@ type ContactLink = {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

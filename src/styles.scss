@@ -1,15 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap');
 
 :root {
-  --surface: #f4f7fb;
-  --surface-card: #ffffff;
-  --text-primary: #222222;
-  --text-muted: #5a6a7a;
-  --primary: #1C5D99;
-  --primary-light: #BBCDE5;
-  --accent: #639FAB;
-  --accent-light: #e8f1f3;
-  --border: #d6e0eb;
+  --surface: #0f1117;
+  --surface-card: #1a1d27;
+  --text-primary: #f1f1f6;
+  --text-muted: #8b8fa3;
+  --primary: #ff6b4a;
+  --primary-light: rgba(255, 107, 74, 0.1);
+  --accent: #ffb347;
+  --accent-light: rgba(255, 179, 71, 0.08);
+  --border: #2a2d3a;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --radius: 12px;
+  --transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -18,12 +24,23 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: 'Source Sans 3', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.6;
+  font-family: 'DM Sans', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
   background: var(--surface);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(255, 107, 74, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(255, 179, 71, 0.04) 0%, transparent 60%);
+  background-attachment: fixed;
   color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -36,12 +53,114 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
   margin-top: 0;
   color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 p {
   margin-top: 0;
   color: var(--text-primary);
 }
+
+/* ── Keyframe Animations ── */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(201, 149, 74, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(201, 149, 74, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Animation Utility Classes ── */
+
+.anim-fade-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.anim-fade-in {
+  animation: fadeIn 0.8s ease backwards;
+}
+
+.anim-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.anim-slide-left {
+  animation: slideInLeft 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.anim-slide-right {
+  animation: slideInRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* Staggered delay helpers */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+.delay-7 { animation-delay: 0.7s; }
+.delay-8 { animation-delay: 0.8s; }
