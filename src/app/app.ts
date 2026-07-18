@@ -46,7 +46,7 @@ type ContactLink = {
 export class App {
   readonly hero = {
     name: 'Sameer Kamran',
-    title: 'Full Stack Web Developer',
+    title: 'Full Stack & AI Engineer',
     location: 'Frankfurt, Germany',
     phone: '(+49)-177-4052203',
     email: 'me@sameerkamran.de',
@@ -54,7 +54,7 @@ export class App {
 
   readonly statements = {
     personal:
-      'An enthusiastic software engineer focused on creating elegant, practical, and scalable web applications. Combines deep technical knowledge with creative problem-solving to consistently deliver value in fast-paced environments. Enjoys mentoring others, exploring emerging technologies, and collaborating on innovative projects that make a difference.',
+      'An enthusiastic software engineer focused on creating elegant, practical, and scalable web applications. Combines deep technical knowledge with creative problem-solving to consistently deliver value in fast-paced environments. Passionate about integrating AI-powered workflows and tools like GitHub Copilot and Claude into the development lifecycle to boost productivity and build smarter solutions. Enjoys mentoring others, exploring emerging technologies, and collaborating on innovative projects that make a difference.',
   };
 
   readonly blogLink = 'https://blog.sameerkamran.com';
@@ -87,6 +87,10 @@ export class App {
     'GIT',
     'AWS',
     'JIRA',
+    'GitHub Copilot',
+    'Claude (Anthropic)',
+    'AI Workflows & Automation',
+    'Prompt Engineering',
   ];
 
   readonly certifications: Certification[] = [
@@ -126,12 +130,13 @@ export class App {
     {
       role: 'Software Engineer',
       company: 'Schwarm Technologies GmbH',
-      period: 'June 2021 - Present',
+      period: 'June 2021 - July 2026',
       location: 'Munich, Germany',
       highlights: [
-        'Working on highly scalable IoT web platforms used by energy companies.',
-        'Developing custom applications for E.On, Nordex, and other German energy organizations.',
-        'Delivering solutions with Angular, Aurelia, and Java Spring.',
+        'Built highly scalable IoT web platforms used by energy companies.',
+        'Developed custom applications for E.On, Nordex, and other German energy organizations.',
+        'Delivered solutions with Angular, Aurelia, and Java Spring.',
+        'Integrated AI-assisted development workflows to accelerate delivery and improve code quality.',
       ],
     },
     {
