@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, NgZone } from '@angular/core';
 
 type Experience = {
   role: string;
@@ -43,7 +43,91 @@ type ContactLink = {
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {
+export class App implements AfterViewInit, OnDestroy {
+  // Typewriter
+  typedTitle = '';
+  private typewriterIndex = 0;
+  private typewriterTimer: ReturnType<typeof setInterval> | null = null;
+  private readonly fullTitle = 'Full Stack & AI Engineer';
+
+  // Animated stats
+  yearsExp = 0;
+  techCount = 0;
+  positionsCount = 0;
+  private statsTargets = { years: 9, tech: 38, positions: 6 };
+  private statsAnimated = false;
+  private statsObserver: IntersectionObserver | null = null;
+
+  constructor(private zone: NgZone) {}
+
+  ngAfterViewInit(): void {
+    this.startTypewriter();
+    this.setupStatsObserver();
+  }
+
+  ngOnDestroy(): void {
+    if (this.typewriterTimer) clearInterval(this.typewriterTimer);
+    this.statsObserver?.disconnect();
+  }
+
+  private startTypewriter(): void {
+    this.typewriterIndex = 0;
+    this.typedTitle = '';
+    this.typewriterTimer = setInterval(() => {
+      if (this.typewriterIndex < this.fullTitle.length) {
+        this.zone.run(() => {
+          this.typedTitle = this.fullTitle.slice(0, this.typewriterIndex + 1);
+        });
+        this.typewriterIndex++;
+      } else {
+        if (this.typewriterTimer) clearInterval(this.typewriterTimer);
+      }
+    }, 70);
+  }
+
+  private setupStatsObserver(): void {
+    this.statsObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !this.statsAnimated) {
+          this.statsAnimated = true;
+          this.animateStats();
+        }
+      },
+      { threshold: 0.5 },
+    );
+    // Observe the stats element after a short delay
+    setTimeout(() => {
+      const el = document.querySelector('.hero__stats');
+      if (el) this.statsObserver?.observe(el);
+    }, 100);
+  }
+
+  private animateStats(): void {
+    this.zone.runOutsideAngular(() => {
+      const duration = 1500;
+      const start = performance.now();
+
+      const tick = (now: number) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+
+        this.zone.run(() => {
+          this.yearsExp = Math.round(this.statsTargets.years * eased);
+          this.techCount = Math.round(this.statsTargets.tech * eased);
+          this.positionsCount = Math.round(this.statsTargets.positions * eased);
+        });
+
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        }
+      };
+
+      requestAnimationFrame(tick);
+    });
+  }
+
   readonly hero = {
     name: 'Sameer Kamran',
     title: 'Full Stack & AI Engineer',
@@ -91,6 +175,44 @@ export class App {
     'Claude (Anthropic)',
     'AI Workflows & Automation',
     'Prompt Engineering',
+    'Azure',
+    'Oracle Cloud',
+    'Kubernetes',
+    'Helm',
+    'Kustomize',
+    'Kafka',
+    'OpenTelemetry',
+    'Prometheus',
+    'Grafana',
+    'FastAPI',
+    'NextJS',
+  ];
+
+  readonly skillCategories = [
+    {
+      name: 'Backend & APIs',
+      skills: ['.Net Core', 'Asp .Net MVC5', 'ExpressJS', 'Laravel', 'FastAPI', 'SignalR', 'RabbitMQ', 'Kafka'],
+    },
+    {
+      name: 'Frontend',
+      skills: ['Angular', 'ReactJS', 'NextJS', 'Blazor', 'RxJS', 'TypeScript', 'JQuery', 'KnockoutJS'],
+    },
+    {
+      name: 'Cloud & DevOps',
+      skills: ['AWS', 'Azure', 'Oracle Cloud', 'Docker', 'Kubernetes', 'Helm', 'Kustomize', 'Git', 'JIRA', 'OpenTelemetry', 'Prometheus', 'Grafana'],
+    },
+    {
+      name: 'AI & Automation',
+      skills: ['GitHub Copilot', 'Claude (Anthropic)', 'AI Workflows & Automation', 'Prompt Engineering'],
+    },
+    {
+      name: 'Libraries & Data',
+      skills: ['EntityFramework', 'AutoMapper', 'AutoFac', 'FluentValidation', 'NUnit', 'NLog', 'SQL Server', 'MongoDB'],
+    },
+    {
+      name: 'UI & Design Systems',
+      skills: ['Angular Material', 'Material UI', 'PrimeNG', 'Bootstrap'],
+    },
   ];
 
   readonly certifications: Certification[] = [
