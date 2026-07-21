@@ -2,17 +2,16 @@
   <header class="section hero">
     <div class="hero__inner">
       <div class="hero__left">
-        <p class="hero__greeting">&#x1F44B; Hello, I'm</p>
         <h1 class="hero__name">{{ hero.name }}</h1>
         <p class="hero__title">
           <span class="typewriter">{{ typedTitle }}</span><span class="cursor">|</span>
         </p>
         <p class="hero__statement">{{ statements.personal }}</p>
         <div class="hero__actions">
-          <a class="btn primary glitch-hover" [href]="blogLink" target="_blank" rel="noreferrer">
+          <a class="btn primary" [href]="blogLink" target="_blank" rel="noreferrer">
             <span>Visit Blog</span>
           </a>
-          <a class="btn ghost glitch-hover" href="#contact">
+          <a class="btn ghost" href="#contact">
             <span>Get in Touch</span>
           </a>
         </div>

@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --surface: #0f1117;
-  --surface-card: #1a1d27;
-  --text-primary: #f1f1f6;
-  --text-muted: #8b8fa3;
-  --primary: #ff6b4a;
-  --primary-light: rgba(255, 107, 74, 0.1);
-  --accent: #ffb347;
-  --accent-light: rgba(255, 179, 71, 0.08);
-  --border: #2a2d3a;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.4);
-  --radius: 12px;
-  --transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --surface: #dcd6cc;
+  --surface-card: #ede8df;
+  --text-primary: #1a1612;
+  --text-muted: #6b6054;
+  --primary: #8b1a1a;
+  --primary-light: rgba(139, 26, 26, 0.06);
+  --accent: #5c3d2e;
+  --accent-light: rgba(92, 61, 46, 0.05);
+  --border: #c4bdb2;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --radius: 2px;
+  --transition: 250ms ease;
 }
 
 *,
@@ -30,14 +30,11 @@ html {
 
 body {
   margin: 0;
-  font-family: 'DM Sans', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Crimson Text', 'Georgia', 'Times New Roman', serif;
   font-weight: 400;
+  font-size: 1.1rem;
   line-height: 1.7;
   background: var(--surface);
-  background-image:
-    radial-gradient(ellipse at 20% 0%, rgba(255, 107, 74, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 100%, rgba(255, 179, 71, 0.04) 0%, transparent 60%);
-  background-attachment: fixed;
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -53,11 +50,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
   margin-top: 0;
   color: var(--text-primary);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
@@ -90,24 +87,6 @@ p {
   }
   50% {
     transform: translateY(-8px);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(201, 149, 74, 0.15);
-  }
-  50% {
-    box-shadow: 0 0 0 12px rgba(201, 149, 74, 0);
   }
 }
 
